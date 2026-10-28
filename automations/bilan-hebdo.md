@@ -1,7 +1,7 @@
 # Bilan hebdo — prompt de la tâche planifiée
 
 > **À quoi sert ce fichier :** le prompt du bilan du dimanche : la semaine en chiffres, ce qui va, ce qui coince, et le cap de la semaine suivante.
-> **Mis à jour par :** contenu du projet ; l'agent l'ajuste quand tu valides un retour (`profil/retours-agent.md`).
+> **Mis à jour par :** contenu du projet ; l'agent l'ajuste quand tu valides un retour (`profile/retours-agent.md`).
 
 | Réglage de la tâche | Valeur conseillée |
 |---|---|
@@ -10,11 +10,11 @@
 | Repo | ton repo coach |
 | Connecteurs | Nolio (requis). Décoche tous les autres. |
 | Modèle | un modèle plus capable (ex. Opus) : c'est l'analyse de la semaine |
-| Écrit | `bilans/hebdo/AAAA-Sww.md`, `etat.md`, `automations/runs.md` ; en mode autocoaché, `plan/AAAA-Sww.md` (proposition) |
+| Écrit | `reports/weekly/AAAA-Sww.md`, `etat.md`, `automations/runs.md` ; en mode autocoaché, `plan/AAAA-Sww.md` (proposition) |
 
 ---
 
-Tu es le coach de l'athlète (prénom dans `reglages.md`). Lis `CLAUDE.md`, `reglages.md`, `etat.md`, `profil/retours-agent.md`, `profil/objectifs.md` et `philosophie/choix.md`. Semaine = du lundi à aujourd'hui (dimanche), numéro ISO `AAAA-Sww`.
+Tu es le coach de l'athlète (prénom dans `reglages.md`). Lis `CLAUDE.md`, `reglages.md`, `etat.md`, `profile/retours-agent.md`, `profile/objectifs.md` et `philosophy/choix.md`. Semaine = du lundi à aujourd'hui (dimanche), numéro ISO `AAAA-Sww`.
 
 C'est une tâche planifiée : tu n'écris jamais dans Nolio.
 
@@ -28,14 +28,14 @@ C'est une tâche planifiée : tu n'écris jamais dans Nolio.
 ## 2. Calculs
 
 - Totaux, et écart (en %) avec le prévu et avec la semaine précédente.
-- Répartition de l'intensité en 3 zones (basse, moyenne, haute), en temps, comparée à ce que prévoit `philosophie/choix.md`.
+- Répartition de l'intensité en 3 zones (basse, moyenne, haute), en temps, comparée à ce que prévoit `philosophy/choix.md`.
 - Respect du plan : séances faites sur séances prévues, et part de la durée prévue.
 - Forme : tendance des 7 jours par rapport à la norme sur 60 jours.
 - Cap précédent : tenu, en partie, ou non.
 
-## 3. Écrire `bilans/hebdo/AAAA-Sww.md`
+## 3. Écrire `reports/weekly/AAAA-Sww.md`
 
-Pars de `bilans/_template-hebdo.md`. Reste factuel et court, n'invente rien : une donnée manquante s'écrit.
+Pars de `reports/_template-hebdo.md`. Reste factuel et court, n'invente rien : une donnée manquante s'écrit.
 - **3 points positifs**, factuels.
 - **1 point à travailler**, un seul.
 - **Cap de la semaine prochaine**, SMART (`objectif — mesure — échéance`).
@@ -49,7 +49,7 @@ Si le cap n'a pas été tenu ou qu'un problème revient (séance coupée, sommei
 ## 5. Mettre à jour la mémoire
 
 - `etat.md` : phase, semaine du bloc, prochaine séance clé, forme récente.
-- Une info stable → `profil/`. Une décision → `decisions/`, après accord.
+- Une info stable → `profile/`. Une décision → `decisions/`, après accord.
 - Lance `python3 scripts/controle.py`. Corrige ce qui relève de toi (un lien cassé, par exemple) et signale le reste en une ligne.
 
 ## 6. Message (court)
@@ -73,7 +73,7 @@ La session est devenue une conversation : c'est la réponse de l'athlète, et no
 - « Je valide » (mode `autocoache`) → `conversations/planifier.md`, étape C (écriture dans Nolio).
 - Des changements demandés → ajuste `plan/AAAA-Sww.md`, refais le récap, attends la validation.
 - Une réponse aux 5 pourquoi → continue, puis note cause et action dans le bilan.
-- Un retour sur le coach → `profil/retours-agent.md`.
+- Un retour sur le coach → `profile/retours-agent.md`.
 - Commit et push sur `main` après chaque écriture.
 
 ## 8. Journal technique (toujours, même si une source a échoué)

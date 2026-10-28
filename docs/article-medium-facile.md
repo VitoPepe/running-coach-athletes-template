@@ -15,7 +15,7 @@
 
 ## Structure (≈ 4 min de lecture)
 
-1. **L'accroche** : le brief du matin, en capture (exemple fictif de `examples/athlete-fictif/sorties/brief.md`) : séance expliquée, feu 🟠 avec sa raison, météo et tenue.
+1. **L'accroche** : le brief du matin, en capture (exemple fictif de `examples/sample-athlete/outputs/brief.md`) : séance expliquée, feu 🟠 avec sa raison, météo et tenue.
 2. **Ce qu'il fait pour toi** : le matin, ta séance et ta forme ; le soir, 3 questions et ton journal ; le dimanche, ton bilan. Une phrase chacun.
 3. **Les 4 étapes**, avec captures :
    - copier le modèle (bouton « Use this template ») ;

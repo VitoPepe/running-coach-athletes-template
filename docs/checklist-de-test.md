@@ -8,7 +8,7 @@
 Prépare : dans `reglages.md`, mets `plateforme: demo`. Ouvre une session sur ton repo.
 
 ### Brief du matin
-- [ ] « Fais mon brief du matin » : le brief est daté du lundi 19 octobre (date de démo de `examples/athlete-fictif/nolio-simule.md`).
+- [ ] « Fais mon brief du matin » : le brief est daté du lundi 19 octobre (date de démo de `examples/sample-athlete/nolio-simule.md`).
 - [ ] Le feu est 🟠, avec sa raison (FC repos au-dessus de la moyenne + 3 bpm, VFC des 7 jours dans la norme).
 - [ ] Le mode autocoaché propose une version allégée de la séance, sans rien écrire dans Nolio.
 - [ ] La tenue correspond à la température ressentie de la météo simulée.
@@ -16,14 +16,14 @@ Prépare : dans `reglages.md`, mets `plateforme: demo`. Ouvre une session sur to
 - [ ] Aucun fichier n'est modifié, aucun commit (`git status` propre).
 
 ### Débrief du soir
-- [ ] « Fais mon débrief du soir du 18 octobre » : prévu et réalisé concordent avec `examples/athlete-fictif/journal/2026/2026-10-18.md`.
+- [ ] « Fais mon débrief du soir du 18 octobre » : prévu et réalisé concordent avec `examples/sample-athlete/journal/2026/2026-10-18.md`.
 - [ ] Les questions ne portent que sur ce qui manque, 3 au plus.
 - [ ] Une réponse comme « douleur 4/10 au tibia droit » déclenche l'alerte (section Alerte, proposition de `conversations/alerte-douleur.md`).
 
 ### Bilan hebdo et plan
 - [ ] « Fais le bilan de la semaine 2026-S42 » : les totaux sont égaux à la somme des activités de `nolio-simule.md`.
 - [ ] 3 points positifs, 1 point à travailler, un cap SMART.
-- [ ] La semaine proposée respecte les disponibilités de `profil/preferences.md`.
+- [ ] La semaine proposée respecte les disponibilités de `profile/preferences.md`.
 - [ ] Dire « je valide » en mode démo : le coach montre ce qu'il *aurait* écrit dans Nolio et dans le registre, sans écrire.
 
 ### Conversations
@@ -49,14 +49,14 @@ Remets `plateforme: nolio` à la fin.
 - [ ] Météo présente. Si elle manque : domaine autorisé ? (`docs/open-meteo.md`)
 - [ ] **Exécuter maintenant** sur le débrief : `journal/AAAA/AAAA-MM-JJ.md` créé, `etat.md` réécrit.
 - [ ] Réponse aux questions dans la session : la note du jour est complétée, avec un nouveau commit.
-- [ ] Le bilan hebdo du dimanche : `bilans/hebdo/AAAA-Sww.md` créé.
+- [ ] Le bilan hebdo du dimanche : `reports/weekly/AAAA-Sww.md` créé.
 - [ ] Après 3 jours : lis les 3 briefs. Est-ce qu'ils se répètent ? Sont-ils utiles en 30 secondes ?
 
 ## D. Contrôle nocturne (niveau 4)
 
 - [ ] Onglet Actions → « Contrôle du coach » → **Run workflow** : vert.
 - [ ] Mets en pause le brief 2 jours : le contrôle échoue et GitHub envoie un mail « pas de brief depuis… ».
-- [ ] Réponds à la question d'amélioration (« trop long ») : ligne dans `profil/retours-agent.md`, et ajustement proposé puis appliqué après ton accord.
+- [ ] Réponds à la question d'amélioration (« trop long ») : ligne dans `profile/retours-agent.md`, et ajustement proposé puis appliqué après ton accord.
 
 ## E. Écriture dans Nolio (niveau 5, autocoaché)
 

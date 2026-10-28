@@ -4,9 +4,9 @@
 > **Mis à jour par :** contenu du projet. Pas de tâche planifiée à part : `automations/brief-matin.md` et `automations/debrief-soir.md` appliquent ce fichier.
 
 **Déclenchement** : une course A ou B dans 7 jours ou moins ; une course C la veille et le jour J ; le lendemain de toute course (J+1).
-Source des courses : les compétitions dans Nolio, sinon le tableau « Courses » de `profil/objectifs.md`.
+Source des courses : les compétitions dans Nolio, sinon le tableau « Courses » de `profile/objectifs.md`.
 
-**Référence** : la fiche `courses/AAAA-MM-JJ-nom.md`, à relire à chaque fois. Si elle manque, crée-la à partir de `courses/_template.md` avec ce que tu sais (Nolio, objectifs) et demande le reste.
+**Référence** : la fiche `races/AAAA-MM-JJ-nom.md`, à relire à chaque fois. Si elle manque, crée-la à partir de `races/_template.md` avec ce que tu sais (Nolio, objectifs) et demande le reste.
 
 ## Dans le brief : la rubrique « 🏁 Course », en tête
 

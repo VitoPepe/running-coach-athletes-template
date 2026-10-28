@@ -38,7 +38,7 @@ Pour voir le coach tourner avant de remplir quoi que ce soit.
 1. Crée ton repo depuis le template (étape 1 du niveau 1).
 2. Dans `reglages.md`, remplace `plateforme: nolio` par `plateforme: demo` (sur GitHub : le crayon ✏️, puis « Commit changes »).
 3. Ouvre une session Claude sur ton repo (étape 3 du niveau 1) et dis : « Fais mon brief du matin ».
-4. Le coach lit l'athlète fictif (`examples/athlete-fictif/`) et ses données simulées, sans rien écrire.
+4. Le coach lit l'athlète fictif (`examples/sample-athlete/`) et ses données simulées, sans rien écrire.
 5. Essaie aussi « Fais mon débrief du soir », « Fais le bilan de la semaine », « Prépare ma semaine prochaine ».
 
 Remets `plateforme: nolio` avant de passer au niveau 1.
@@ -127,7 +127,7 @@ Deux mécanismes, déjà dans le repo.
 2. Clique sur **Contrôle du coach** → **Run workflow** pour un premier essai.
 3. Vérifie que les notifications d'Actions sont actives dans tes réglages GitHub (Settings → Notifications → Actions).
 
-**La boucle d'amélioration.** Chaque tâche finit par une question pour mieux faire son travail (« Trop long ce matin ? »). Tes réponses vont dans `profil/retours-agent.md`, et le coach ajuste son propre prompt dans `automations/` quand tu valides le changement. Le bilan mensuel fait le ménage pour que ce fichier reste court.
+**La boucle d'amélioration.** Chaque tâche finit par une question pour mieux faire son travail (« Trop long ce matin ? »). Tes réponses vont dans `profile/retours-agent.md`, et le coach ajuste son propre prompt dans `automations/` quand tu valides le changement. Le bilan mensuel fait le ménage pour que ce fichier reste court.
 
 ## Niveau 5 — L'entraîneur (5 min, mode autocoaché)
 

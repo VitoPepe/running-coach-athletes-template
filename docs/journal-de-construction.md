@@ -101,12 +101,12 @@ Le feu compare la VFC moyenne des 7 derniers jours à ta norme personnelle sur 6
 
 ### ✅ Une boucle d'amélioration intégrée
 
-Chaque tâche finit par une question (« Trop long ce matin ? »). Les réponses vont dans `profil/retours-agent.md`, et l'agent ajuste son propre prompt quand l'athlète valide, sans jamais toucher aux règles de sécurité. Le bilan mensuel condense le fichier pour qu'il reste sous 4 Ko.
+Chaque tâche finit par une question (« Trop long ce matin ? »). Les réponses vont dans `profile/retours-agent.md`, et l'agent ajuste son propre prompt quand l'athlète valide, sans jamais toucher aux règles de sécurité. Le bilan mensuel condense le fichier pour qu'il reste sous 4 Ko.
 **Pourquoi :** le meilleur prompt est celui que l'athlète a façonné. Et un fichier de retours qui grossit sans fin finit par coûter cher à chaque lecture.
 
 ### 🧭 Une démo sans compte
 
-`examples/athlete-fictif/` contient un athlète complet et un faux Nolio (`nolio-simule.md`, météo comprise). Avec `plateforme: demo`, les vrais prompts tournent sur ces données, sans rien écrire.
+`examples/sample-athlete/` contient un athlète complet et un faux Nolio (`nolio-simule.md`, météo comprise). Avec `plateforme: demo`, les vrais prompts tournent sur ces données, sans rien écrire.
 **Pourquoi :** on essaie en 5 minutes avant de s'engager. Et ça sert aussi de banc de test reproductible pour chaque modification de prompt.
 
 ### 🔍 Le connecteur Nolio demande un Premium Athlete, même avec un coach

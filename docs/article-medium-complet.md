@@ -16,7 +16,7 @@ Un coureur et ingénieur data a construit un coach de course à pied avec Claude
 
 ## Structure de l'article (≈ 8 min de lecture)
 
-1. **L'accroche** (≈ 150 mots) : un matin de semaine, le brief arrive sur le téléphone. Montrer le vrai format (exemple fictif de `examples/athlete-fictif/sorties/brief.md`), feu orange compris. « Ce message, personne ne l'a écrit. »
+1. **L'accroche** (≈ 150 mots) : un matin de semaine, le brief arrive sur le téléphone. Montrer le vrai format (exemple fictif de `examples/sample-athlete/outputs/brief.md`), feu orange compris. « Ce message, personne ne l'a écrit. »
 2. **Le problème** : les données sont là (montre, Nolio), le plan aussi (coach ou soi-même). Ce qui manque, c'est quelqu'un qui relie les deux chaque jour, explique, et se souvient.
 3. **L'idée : un repo-mémoire** : des fichiers texte que Claude lit et écrit. Schéma 1 de `docs/architecture.md`. Pourquoi Markdown et Git (lisible, historique gratuit, zéro serveur).
 4. **Les 6 niveaux**, un paragraphe et une capture chacun (schéma de `AUTOMATISATION.md`) :

@@ -10,7 +10,7 @@ Chaque tâche finit par une question pour s'améliorer. Réponds-y, ou dis à to
 - « Arrête de me proposer de la mobilité. »
 - « Ajoute une citation de motivation le lundi. »
 
-Le coach note ton retour dans `profil/retours-agent.md`, te propose l'ajustement, et modifie lui-même le fichier `automations/` concerné quand tu valides. Il ne touche jamais aux règles de sécurité ni aux règles d'écriture dans Nolio.
+Le coach note ton retour dans `profile/retours-agent.md`, te propose l'ajustement, et modifie lui-même le fichier `automations/` concerné quand tu valides. Il ne touche jamais aux règles de sécurité ni aux règles d'écriture dans Nolio.
 
 ## Les réglages courants
 
@@ -18,13 +18,13 @@ Le coach note ton retour dans `profil/retours-agent.md`, te propose l'ajustement
 |---|---|---|
 | changer l'heure d'une tâche | dans Claude | modifie la tâche planifiée (et le mémo de `reglages.md`) |
 | mettre une tâche en pause | dans Claude | interrupteur on/off de la tâche |
-| ajuster le feu vert/orange/rouge | `profil/sante.md` › Seuils personnels | ex. « FC repos : orange à +5 bpm » |
+| ajuster le feu vert/orange/rouge | `profile/sante.md` › Seuils personnels | ex. « FC repos : orange à +5 bpm » |
 | changer de mode (avec coach ↔ autocoaché) | `reglages.md` + permissions Nolio | dis « je change de mode » : le coach t'accompagne et note une décision |
 | changer d'approche d'entraînement | conversation | « On revoit ma philosophie d'entraînement » (onboarding, bloc 7) |
 | ajouter une course | conversation | « J'ai une nouvelle course » (onboarding, bloc 3) |
 | déclarer un voyage | conversation | « Je pars à Lyon du 3 au 5 novembre » |
 | changer de ville pour la météo | `reglages.md` | ville, latitude, longitude |
-| ne plus voir une information | `profil/preferences.md` › Ce que je ne veux pas lire | ex. « pas de charge d'entraînement » |
+| ne plus voir une information | `profile/preferences.md` › Ce que je ne veux pas lire | ex. « pas de charge d'entraînement » |
 
 ## Modifier un prompt toi-même
 
@@ -53,7 +53,7 @@ Un module, c'est une consigne lue seulement quand une condition est vraie (exemp
 Un repo créé depuis un template ne se met pas à jour tout seul. Pour récupérer une nouvelle version :
 1. Regarde l'historique du projet d'origine (les commits, et `docs/journal-de-construction.md`).
 2. Recopie les fichiers qui t'intéressent : `automations/`, `conversations/`, `docs/`, `CLAUDE.md`. Attention : si tu les avais personnalisés, compare avant d'écraser.
-3. Ne touche pas à tes données : `profil/`, `journal/`, `bilans/`, `etat.md`, `reglages.md`.
+3. Ne touche pas à tes données : `profile/`, `journal/`, `reports/`, `etat.md`, `reglages.md`.
 
 ## Aller plus loin
 

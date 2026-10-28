@@ -17,7 +17,7 @@ flowchart TB
     end
     subgraph R["📁 Ton repo : la mémoire"]
         direction LR
-        M["profil/ · journal/ · bilans/<br/>etat.md · reglages.md"]
+        M["profile/ · journal/ · reports/<br/>etat.md · reglages.md"]
         P["CLAUDE.md · automations/<br/>conversations/"]
     end
     subgraph X["🔌 Sources"]
@@ -72,9 +72,9 @@ flowchart TB
     BM["🗓️ bilan-mensuel"]
     ET["etat.md<br/>mémoire courte, 40 lignes"]
     JO["journal/AAAA/AAAA-MM-JJ.md<br/>une note par jour, figée"]
-    BHf["bilans/hebdo/AAAA-Sww.md"]
-    BMf["bilans/mensuel/AAAA-MM.md"]
-    PR["profil/objectifs.md"]
+    BHf["reports/weekly/AAAA-Sww.md"]
+    BMf["reports/monthly/AAAA-MM.md"]
+    PR["profile/objectifs.md"]
     DS -->|"écrit"| JO
     DS -->|"réécrit"| ET
     ET -->|"seul fichier lu"| BR
@@ -135,7 +135,7 @@ flowchart LR
         CL["CLAUDE.md"]
         AU["automations/ : les étapes"]
         CO["conversations/"]
-        DA["profil/ · journal/ · bilans/"]
+        DA["profile/ · journal/ · reports/"]
     end
     subgraph S["Propre à la plateforme"]
         SP["section « Plateforme : Nolio »<br/>de chaque automatisation"]

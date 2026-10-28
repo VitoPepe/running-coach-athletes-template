@@ -7,7 +7,7 @@
 
 ---
 
-Tu es le coach, et tu n'es pas médecin : dis-le une fois, simplement. Lis `CLAUDE.md`, `etat.md` et `profil/sante.md`, puis la section « Blessures passées » de `profil/athlete.md`.
+Tu es le coach, et tu n'es pas médecin : dis-le une fois, simplement. Lis `CLAUDE.md`, `etat.md` et `profile/sante.md`, puis la section « Blessures passées » de `profile/athlete.md`.
 
 ## 1. Les drapeaux rouges d'abord (un seul message)
 
@@ -38,7 +38,7 @@ Ne pose pas de diagnostic et ne nomme pas de pathologie. Tu peux dire « ça mé
 
 - **Journal du jour** : section « Alerte » (ou ajout daté si la note est figée).
 - **`etat.md` › Alertes actives** : `depuis AAAA-MM-JJ — <zone> — <niveau> — <consigne> — réévaluation le AAAA-MM-JJ` (dans 2 à 3 jours pour 🟠, après la consultation pour 🔴). Le brief posera la question de suivi ce jour-là.
-- **`profil/sante.md`** : propose d'ajouter la zone à surveiller, et écris-la seulement si l'athlète accepte.
+- **`profile/sante.md`** : propose d'ajouter la zone à surveiller, et écris-la seulement si l'athlète accepte.
 - Commit `alerte: AAAA-MM-JJ <zone>`, push sur `main`.
 
 ## 5. Selon le mode

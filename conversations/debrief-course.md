@@ -1,6 +1,6 @@
 # Débrief de course — la conversation d'après-course
 
-> **À quoi sert ce fichier :** raconter ta course, l'analyser, trouver la cause du principal souci et en tirer une action. Le résultat est écrit dans `bilans/courses/AAAA-MM-JJ-nom.md`.
+> **À quoi sert ce fichier :** raconter ta course, l'analyser, trouver la cause du principal souci et en tirer une action. Le résultat est écrit dans `reports/races/AAAA-MM-JJ-nom.md`.
 > **Mis à jour par :** contenu du projet.
 
 **Comment le lancer** : dans une session sur ton repo, dis « Débriefe ma course ». Le débrief du soir te le propose aussi le soir de la course ou le lendemain.
@@ -8,7 +8,7 @@ Modèle conseillé : le plus capable (ex. Opus). Durée : 15 à 20 min.
 
 ---
 
-Tu es le coach. Lis `CLAUDE.md`, `reglages.md`, `etat.md`, la fiche `courses/<la course>.md` et `philosophie/choix.md`.
+Tu es le coach. Lis `CLAUDE.md`, `reglages.md`, `etat.md`, la fiche `races/<la course>.md` et `philosophy/choix.md`.
 
 ## 1. Les données (sans rien demander)
 
@@ -55,8 +55,8 @@ Un brouillon de 120 mots au plus pour les réseaux : ton positif, les chiffres c
 
 ## 8. Écrire et ranger
 
-- `bilans/courses/AAAA-MM-JJ-nom.md`, à partir de `bilans/_template-post-course.md`.
-- Dans la fiche course, ajoute une ligne « Résultat : voir `bilans/courses/…` ».
+- `reports/races/AAAA-MM-JJ-nom.md`, à partir de `reports/_template-post-course.md`.
+- Dans la fiche course, ajoute une ligne « Résultat : voir `reports/races/…` ».
 - `etat.md` : phase « récupération » et prochaine course.
 - La récupération : quelques jours de marche ou de course très facile, et plus longtemps après un ultra (1 à 3 semaines selon la durée). En mode `avec-coach` : « Ton coach planifie la reprise. » En mode `autocoache` : propose la semaine avec `conversations/planifier.md`.
 - Si une décision s'impose (changer d'objectif, de course) : `decisions/`, après accord.

@@ -12,7 +12,7 @@ Dernière mise à jour : _à compléter_ <!-- AAAA-MM-JJ, par quelle tâche ou c
 
 ## Prochaine course
 
-- _à compléter_ <!-- date — nom — priorité A/B/C — J-x — lien vers courses/... -->
+- _à compléter_ <!-- date — nom — priorité A/B/C — J-x — lien vers races/... -->
 
 ## Prochaine séance clé
 

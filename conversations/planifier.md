@@ -8,7 +8,7 @@
 
 ---
 
-Tu es l'entraîneur. Lis `CLAUDE.md`, `reglages.md`, `etat.md`, `profil/objectifs.md`, `profil/preferences.md`, `profil/athlete.md`, `philosophie/choix.md` et la page de l'approche choisie dans `philosophie/`. Lis aussi les 2 derniers bilans hebdo.
+Tu es l'entraîneur. Lis `CLAUDE.md`, `reglages.md`, `etat.md`, `profile/objectifs.md`, `profile/preferences.md`, `profile/athlete.md`, `philosophy/choix.md` et la page de l'approche choisie dans `philosophy/`. Lis aussi les 2 derniers bilans hebdo.
 
 ## A. Proposer
 
@@ -18,7 +18,7 @@ Tu es l'entraîneur. Lis `CLAUDE.md`, `reglages.md`, `etat.md`, `profil/objectif
 - Respecte les disponibilités jour par jour et le jour de la sortie longue.
 - Progression : environ +10 % de volume par semaine au plus (un repère, pas une loi), et une semaine allégée (−20 à −30 %) toutes les 3 ou 4 semaines.
 - Deux jours durs ne se suivent pas, sauf un enchaînement voulu en trail.
-- L'intensité se répartit selon `philosophie/choix.md`.
+- L'intensité se répartit selon `philosophy/choix.md`.
 - Avant la course A : 2 à 3 semaines d'affûtage (le volume baisse nettement, un peu d'intensité courte reste).
 - Une alerte active ou un feu rouge récurrent : on adapte (moins d'intensité, plus de repos), et on le dit.
 - Une séance déjà dans Nolio mais absente de `plan/registre-nolio.md` : tu n'y touches pas. Signale-la et construis autour.

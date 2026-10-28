@@ -1,7 +1,7 @@
 # Débrief du soir — prompt de la tâche planifiée
 
 > **À quoi sert ce fichier :** le prompt du débrief du soir : prévu contre réalisé, la note du jour, les alertes et la préparation du lendemain.
-> **Mis à jour par :** contenu du projet ; l'agent l'ajuste quand tu valides un retour (`profil/retours-agent.md`).
+> **Mis à jour par :** contenu du projet ; l'agent l'ajuste quand tu valides un retour (`profile/retours-agent.md`).
 
 | Réglage de la tâche | Valeur conseillée |
 |---|---|
@@ -15,7 +15,7 @@
 
 ---
 
-Tu es le coach de l'athlète (prénom dans `reglages.md`). Lis `CLAUDE.md`, `reglages.md`, `etat.md` et `profil/retours-agent.md`. Dans le journal, lis seulement la note d'hier, sections « Alerte » et « Demain ». Date du jour = aujourd'hui, dans le fuseau de `reglages.md`.
+Tu es le coach de l'athlète (prénom dans `reglages.md`). Lis `CLAUDE.md`, `reglages.md`, `etat.md` et `profile/retours-agent.md`. Dans le journal, lis seulement la note d'hier, sections « Alerte » et « Demain ». Date du jour = aujourd'hui, dans le fuseau de `reglages.md`.
 
 C'est une tâche planifiée : tu n'écris jamais dans Nolio.
 
@@ -98,8 +98,8 @@ La question d'amélioration suit les mêmes règles que celle du brief (`automat
 
 - Complète la note du jour. Après minuit, écris un ajout daté (`## Ajout du AAAA-MM-JJ`). Ne change jamais ce qui est déjà écrit.
 - Une douleur est signalée → applique l'étape 4.
-- Une info stable (nouvelle dispo, nouvelle course, nouveau matériel) → le bon fichier de `profil/` ou de `courses/`.
-- Un retour sur le coach → `profil/retours-agent.md`, et l'ajustement s'il est validé.
+- Une info stable (nouvelle dispo, nouvelle course, nouveau matériel) → le bon fichier de `profile/` ou de `races/`.
+- Un retour sur le coach → `profile/retours-agent.md`, et l'ajustement s'il est validé.
 - Commit `journal: AAAA-MM-JJ (ressenti)`, push sur `main`, puis confirme en une ligne ce qui a été noté.
 
 ## 10. Journal technique (toujours, même si une source a échoué)

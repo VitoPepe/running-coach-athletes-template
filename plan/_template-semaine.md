@@ -22,7 +22,7 @@
 
 ## Pourquoi cette semaine
 
-<!-- 3 lignes : la logique, le lien avec philosophie/choix.md et avec l'objectif. -->
+<!-- 3 lignes : la logique, le lien avec philosophy/choix.md et avec l'objectif. -->
 
 ## Ce que tu peux ajuster sans me demander
 

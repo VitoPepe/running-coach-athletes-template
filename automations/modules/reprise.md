@@ -12,7 +12,7 @@
 
 ## D'abord
 
-- **Après une blessure** : la reprise se fait seulement avec le feu vert d'un professionnel de santé. Ensuite, on suit `philosophie/retour-de-blessure.md`.
+- **Après une blessure** : la reprise se fait seulement avec le feu vert d'un professionnel de santé. Ensuite, on suit `philosophy/retour-de-blessure.md`.
 - **Après une maladie** : 24 à 48 h sans fièvre ni symptômes avant de reprendre. Fièvre, toux grasse ou courbatures générales : pas d'entraînement.
 - **Coupure prévue** (fin de saison, vrai repos) : respecte-la. Pas de séance, pas de renforcement imposé. Le brief propose seulement 10 à 15 min de mobilité douce, pour se détendre.
 

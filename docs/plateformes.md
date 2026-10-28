@@ -20,8 +20,8 @@ Changer de plateforme, c'est réécrire ces deux endroits, et rien d'autre.
 | 3 | RPE, ressenti, commentaire de l'athlète | non | débrief | le débrief pose la question |
 | 4 | VFC de la nuit (rMSSD), FC repos, sommeil | non | brief (feu), bilans | feu ⚪, ou feu sur FC repos et sommeil seulement |
 | 5 | Charge et forme | non | brief, bilan hebdo | le coach s'appuie sur le volume et l'intensité |
-| 6 | Records, compétitions | non | bilan mensuel, mode course | les courses viennent de `profil/objectifs.md` |
-| 7 | Zones de l'athlète (FC, allure) | non | brief, planifier | zones estimées depuis la FC max de `profil/athlete.md` |
+| 6 | Records, compétitions | non | bilan mensuel, mode course | les courses viennent de `profile/objectifs.md` |
+| 7 | Zones de l'athlète (FC, allure) | non | brief, planifier | zones estimées depuis la FC max de `profile/athlete.md` |
 | 8 | Créer et supprimer une séance | non | planifier (autocoaché) | le coach propose, et l'athlète saisit lui-même |
 
 ## Brancher une autre plateforme

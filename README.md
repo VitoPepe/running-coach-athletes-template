@@ -64,7 +64,7 @@ Tu es coach et tu veux un assistant pour suivre tes athlètes ? C'est le projet 
 >    1. Ressenti général de la journée, de 1 à 5 ?  
 > 🔧 Pour m'améliorer : le prévu/réalisé en une ligne te suffit, ou tu veux aussi le détail des zones ?
 
-*Exemples écrits à partir des données de démo de [Nora, l'athlète fictive](examples/athlete-fictif/README.md) du projet. Toutes ses données sont inventées.*
+*Exemples écrits à partir des données de démo de [Nora, l'athlète fictive](examples/sample-athlete/README.md) du projet. Toutes ses données sont inventées.*
 
 ---
 
@@ -87,7 +87,7 @@ flowchart TB
     end
     subgraph R["📁 Ton repo : la mémoire"]
         direction LR
-        M["profil/ · journal/ · bilans/<br/>etat.md · reglages.md"]
+        M["profile/ · journal/ · reports/<br/>etat.md · reglages.md"]
         P["CLAUDE.md · automations/<br/>conversations/"]
     end
     subgraph X["🔌 Sources"]
@@ -213,8 +213,8 @@ flowchart TD
 |---|---|---|---|---|
 | [Brief du matin](automations/brief-matin.md) | tous les jours, 07:37 | séance expliquée, feu de forme, météo, tenue | `etat.md`, Nolio, météo, agenda (option) | une ligne de `runs.md` |
 | [Débrief du soir](automations/debrief-soir.md) | tous les jours, 21:07 | prévu/réalisé, 3 questions, alerte, demain | `etat.md`, la note d'hier, Nolio | `journal/`, `etat.md` |
-| [Bilan hebdo](automations/bilan-hebdo.md) | dimanche, 21:37 | chiffres, top 3, à travailler, cap SMART, semaine proposée | les 7 notes, Nolio, objectifs | `bilans/hebdo/`, `plan/` |
-| [Bilan mensuel](automations/bilan-mensuel.md) | le 1er, 19:07 | objectifs, tendances, matériel, lecture, ménage de la mémoire | bilans hebdo du mois, Nolio | `bilans/mensuel/` |
+| [Bilan hebdo](automations/bilan-hebdo.md) | dimanche, 21:37 | chiffres, top 3, à travailler, cap SMART, semaine proposée | les 7 notes, Nolio, objectifs | `reports/weekly/`, `plan/` |
+| [Bilan mensuel](automations/bilan-mensuel.md) | le 1er, 19:07 | objectifs, tendances, matériel, lecture, ménage de la mémoire | bilans hebdo du mois, Nolio | `reports/monthly/` |
 
 Chaque tâche planifiée contient un **prompt talon de 4 lignes** qui renvoie au fichier du repo : pour changer ton brief, tu modifies un fichier, sans retourner dans les réglages.
 
@@ -246,17 +246,17 @@ Chaque tâche planifiée contient un **prompt talon de 4 lignes** qui renvoie au
 ├── reglages.md            ton mode, ta plateforme, ton lieu, tes connecteurs
 ├── etat.md                la mémoire courte : ce qui est vrai maintenant
 ├── AUTOMATISATION.md      les 6 niveaux, pas à pas
-├── profil/                qui tu es, tes objectifs, tes préférences, ta santé, tes retours sur le coach
-├── philosophie/           5 approches d'entraînement sourcées + ton choix
-├── courses/               une fiche par course
+├── profile/                qui tu es, tes objectifs, tes préférences, ta santé, tes retours sur le coach
+├── philosophy/           5 approches d'entraînement sourcées + ton choix
+├── races/               une fiche par course
 ├── plan/                  tes semaines proposées et le registre des écritures Nolio (autocoaché)
 ├── journal/               une note par jour, jamais réécrite
-├── bilans/                hebdo, mensuel, post-course
+├── reports/                hebdo, mensuel, post-course
 ├── decisions/             les choix structurants et leurs raisons
 ├── automations/           les tâches planifiées, leurs modules, le journal technique
 ├── conversations/         onboarding, débrief de course, douleur, planifier
 ├── docs/                  guides : Nolio, météo, agenda, personnaliser, glossaire, architecture…
-├── examples/athlete-fictif/  Nora, une athlète fictive complète (et le mode démo)
+├── examples/sample-athlete/  Nora, une athlète fictive complète (et le mode démo)
 └── scripts/ + .github/    le contrôle nocturne
 ```
 
@@ -277,7 +277,7 @@ Chaque fichier commence par deux lignes : à quoi il sert, et qui le met à jour
 - **Ton repo contient des données de santé : il doit être privé.** Le template est public, mais ta copie ne doit pas l'être.
 - **Où vont tes données** : dans ton repo GitHub (privé), dans Claude (tes sessions et tâches), et dans Nolio (qui les a déjà). Rien d'autre, sauf la météo, interrogée avec les coordonnées de ta ville.
 - **Aucun secret dans le repo** : les connecteurs passent par la connexion de ton compte, sans clé à recopier.
-- **Moins, c'est mieux** : `profil/sante.md` ne demande que ce qui change l'entraînement.
+- **Moins, c'est mieux** : `profile/sante.md` ne demande que ce qui change l'entraînement.
 - **Tout supprimer** : supprime le repo, retire les connecteurs (Claude → Réglages → Connecteurs ; Nolio → Paramètres → MCP), supprime les tâches planifiées.
 
 ## 💸 Coût et consommation
@@ -346,7 +346,7 @@ La licence du projet (MIT) le permet. Vérifie les conditions des services utili
 | [docs/glossaire.md](docs/glossaire.md) | zones, VFC, RPE, charge, affûtage… |
 | [docs/architecture.md](docs/architecture.md) | tous les schémas |
 | [docs/checklist-de-test.md](docs/checklist-de-test.md) | vérifier que tout marche |
-| [philosophie/](philosophie/) | les 5 approches d'entraînement, avec leurs sources |
+| [philosophy/](philosophy/) | les 5 approches d'entraînement, avec leurs sources |
 | [docs/journal-de-construction.md](docs/journal-de-construction.md) | les choix et les leçons de la construction |
 | [docs/article-medium-facile.md](docs/article-medium-facile.md) · [complet](docs/article-medium-complet.md) | les plans des deux articles Medium |
 
@@ -357,7 +357,7 @@ La licence du projet (MIT) le permet. Vérifie les conditions des services utili
 Les contributions sont bienvenues, surtout :
 - **une autre plateforme** (Garmin, Strava, TrainingPeaks) : une page `docs/<plateforme>.md` sur le modèle de `docs/nolio.md` ;
 - **une version anglaise** ;
-- **une approche d'entraînement** de plus dans `philosophie/`, avec ses sources ;
+- **une approche d'entraînement** de plus dans `philosophy/`, avec ses sources ;
 - **des retours d'usage** : ouvre une issue avec ce qui marche et ce qui coince (sans données personnelles).
 
 Avant une pull request :

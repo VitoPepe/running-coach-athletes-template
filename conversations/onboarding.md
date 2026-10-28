@@ -1,6 +1,6 @@
 # Onboarding — l'interview de départ
 
-> **À quoi sert ce fichier :** l'interview qui fait connaissance avec toi et remplit `profil/`, `courses/`, `philosophie/choix.md` et `reglages.md`. Une fois au début, puis par morceaux quand quelque chose change.
+> **À quoi sert ce fichier :** l'interview qui fait connaissance avec toi et remplit `profile/`, `races/`, `philosophy/choix.md` et `reglages.md`. Une fois au début, puis par morceaux quand quelque chose change.
 > **Mis à jour par :** contenu du projet.
 
 **Comment la lancer** : ouvre une session Claude sur ton repo coach et dis « Lance l'onboarding ».
@@ -26,14 +26,14 @@ Tu es le coach. Lis `CLAUDE.md` et `reglages.md`. Tu mènes une interview chaleu
 - Prénom, année de naissance, sexe (facultatif, dis pourquoi c'est utile), ville et terrain.
 - « As-tu un coach qui te prépare ton plan dans Nolio ? » → `mode: avec-coach` (avec le prénom du coach) ou `mode: autocoache`.
 - Explique en 2 lignes ce que ça change (voir `CLAUDE.md` › Ton rôle selon le mode).
-→ `profil/athlete.md` › Identité, `reglages.md` › Athlète et Mode.
+→ `profile/athlete.md` › Identité, `reglages.md` › Athlète et Mode.
 
 ### 2. Ton historique de coureur
 - Depuis quand tu cours, les autres sports, les courses marquantes.
 - Volume des 8 dernières semaines, plus longue sortie récente : lis-les dans Nolio et fais-les confirmer.
 - Records, FC max, FC repos, VMA ou allure seuil, zones : Nolio d'abord.
 - Blessures passées : quand, quoi, combien de temps d'arrêt, ce qui a aidé.
-→ `profil/athlete.md`.
+→ `profile/athlete.md`.
 
 ### 3. Tes objectifs et tes courses
 - La saison en une phrase : « Qu'est-ce que tu veux de cette saison ? »
@@ -41,31 +41,31 @@ Tu es le coach. Lis `CLAUDE.md` et `reglages.md`. Tu mènes une interview chaleu
 - Les objectifs. Pour chaque objectif flou, **propose la version SMART** (`objectif — mesure — échéance`) et fais-la valider. Exemple : « Progresser en côte » devient « Monter le Kilomètre Vertical de mon club en moins de 50 min — chrono — 2027-05-31 ».
 - Un ou deux objectifs de fond (régularité, renforcement).
 - En mode `avec-coach` : « Ces objectifs sont-ils fixés avec ton coach ? » Note-le.
-→ `profil/objectifs.md`. Une fiche `courses/AAAA-MM-JJ-nom.md` par course A ou B, avec la section « L'essentiel » seulement : la stratégie viendra en semaine de course.
+→ `profile/objectifs.md`. Une fiche `races/AAAA-MM-JJ-nom.md` par course A ou B, avec la section « L'essentiel » seulement : la stratégie viendra en semaine de course.
 
 ### 4. Tes contraintes de vie et de temps
 - Rythme pro et perso, heures disponibles par semaine, contraintes fixes.
 - Jour par jour : dispo, créneau, durée max. Jour préféré pour la sortie longue.
-→ `profil/athlete.md` › Vie et temps, `profil/preferences.md` › Disponibilités.
+→ `profile/athlete.md` › Vie et temps, `profile/preferences.md` › Disponibilités.
 
 ### 5. Ta santé
 - Rappelle d'abord : « Ce repo est privé, et je ne te demande que ce qui sert à l'entraînement. »
 - Zones fragiles, sommeil habituel, VFC disponible (et via quoi), FC repos de référence (Nolio d'abord).
 - Ce qui change l'entraînement (asthme d'effort, traitement qui modifie la FC…), et qui consulter (médecin, kiné : « oui / non » suffit).
-→ `profil/sante.md`.
+→ `profile/sante.md`.
 
 ### 6. Tes préférences
 - Séances aimées, détestées, repoussées. Renforcement, autre sport.
 - Terrain près de chez toi. Seul·e, en groupe, en club.
 - Ce qui te motive, ce qui te démotive.
 - Messages du coach : niveau de détail, ce que tu ne veux pas lire.
-→ `profil/preferences.md`.
+→ `profile/preferences.md`.
 
 ### 7. Ta philosophie d'entraînement
-- Présente les 5 approches de `philosophie/` en une ligne chacune.
+- Présente les 5 approches de `philosophy/` en une ligne chacune.
 - **Recommande-en une** (et un complément si utile), avec 3 raisons tirées des blocs précédents. L'athlète choisit.
 - En mode `avec-coach` : « C'est ton coach qui décide de l'approche. On note la sienne, pour que je t'explique ses séances dans sa logique. »
-→ `philosophie/choix.md`.
+→ `philosophy/choix.md`.
 
 ### 8. Lieu, connecteurs et premier état
 - Ville pour la météo → latitude et longitude (géocodage Open-Meteo `https://geocoding-api.open-meteo.com/v1/search?name=<ville>&count=1&language=fr` si accessible, sinon tes connaissances), à faire confirmer.
@@ -77,4 +77,4 @@ Tu es le coach. Lis `CLAUDE.md` et `reglages.md`. Tu mènes une interview chaleu
 
 ## Pour finir
 
-Résume le profil en 6 lignes. Puis donne les prochaines étapes : créer les tâches planifiées (`AUTOMATISATION.md`) en commençant par le brief du matin, puis le débrief du soir. Termine par « Qu'est-ce qui t'a manqué dans cette interview ? », et note la réponse dans `profil/retours-agent.md`.
+Résume le profil en 6 lignes. Puis donne les prochaines étapes : créer les tâches planifiées (`AUTOMATISATION.md`) en commençant par le brief du matin, puis le débrief du soir. Termine par « Qu'est-ce qui t'a manqué dans cette interview ? », et note la réponse dans `profile/retours-agent.md`.
