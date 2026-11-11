@@ -1,0 +1,103 @@
+# Fusion automatique : tout ce que Claude pousse sur une branche `claude/…` arrive sur `main`, sans rien faire.
+# Mis à jour par : personne (contenu du projet). Voir AUTOMATISATION.md › « Les branches claude/… ».
+#
+# Pourquoi : une session Claude (conversation ou tâche planifiée) peut être obligée de pousser sur une
+# branche `claude/…` au lieu de `main`. Sans fusion, la session suivante, qui part de `main`, ne voit
+# pas ce travail (onboarding, journal, etat.md…). Ce workflow le fusionne dans `main` à chaque push.
+#
+# - À chaque push sur `claude/…` : fusion de la branche dans `main`.
+# - Chaque nuit (et sur le bouton « Run workflow ») : rattrapage de toutes les branches `claude/…`
+#   pas encore fusionnées, puis suppression de celles qui sont fusionnées et inactives depuis 2 jours.
+# - Conflit : rien n'est forcé, rien n'est perdu. La branche reste, le workflow échoue et GitHub
+#   t'envoie un mail. Ouvre une session et dis « Fusionne la branche claude/… dans main ».
+name: Fusion automatique dans main
+
+on:
+  push:
+    branches:
+      - "claude/**"
+  schedule:
+    - cron: "7 4 * * *" # tous les jours à 04:07 UTC, avant le contrôle du coach
+  workflow_dispatch: # bouton « Run workflow » dans l'onglet Actions
+
+permissions:
+  contents: write
+
+# Une seule fusion à la fois : deux sessions qui poussent en même temps passent l'une après l'autre.
+concurrency:
+  group: merge-auto
+  cancel-in-progress: false
+
+jobs:
+  fusion:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Fusionner les branches claude/… dans main
+        env:
+          EVENT: ${{ github.event_name }}
+          PUSHED: ${{ github.ref_name }}
+        run: |
+          set -u
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if [ "$EVENT" = "push" ]; then
+            branches="$PUSHED"
+          else
+            git fetch --quiet --prune origin
+            branches=$(git for-each-ref --format='%(refname:lstrip=3)' 'refs/remotes/origin/claude/')
+          fi
+
+          echo "### Fusion automatique dans main" >> "$GITHUB_STEP_SUMMARY"
+          [ -z "$branches" ] && echo "Aucune branche \`claude/…\`." >> "$GITHUB_STEP_SUMMARY"
+
+          echec=0
+          for b in $branches; do
+            # Repartir du main distant le plus récent (une autre fusion a pu passer entre-temps).
+            git fetch --quiet origin main "$b" || { echo "- ⚠️ \`$b\` : introuvable" >> "$GITHUB_STEP_SUMMARY"; continue; }
+            git checkout --quiet -B main origin/main
+
+            if git merge-base --is-ancestor "origin/$b" origin/main; then
+              echo "- \`$b\` : déjà dans main" >> "$GITHUB_STEP_SUMMARY"
+            elif git merge --no-edit -m "fusion: $b dans main" "origin/$b"; then
+              pousse=0
+              for attente in 2 4 8 16; do
+                if git push --quiet origin main; then pousse=1; break; fi
+                # main a bougé : on refait la fusion sur le nouveau main.
+                sleep "$attente"
+                git fetch --quiet origin main
+                git checkout --quiet -B main origin/main
+                git merge --no-edit -m "fusion: $b dans main" "origin/$b" || break
+              done
+              if [ "$pousse" = 1 ]; then
+                echo "- ✅ \`$b\` : fusionnée dans main" >> "$GITHUB_STEP_SUMMARY"
+              else
+                git merge --abort 2>/dev/null || true
+                echo "- ⚠️ \`$b\` : fusion impossible à pousser, la branche est gardée" >> "$GITHUB_STEP_SUMMARY"
+                echec=1
+              fi
+            else
+              git merge --abort
+              echo "- ⚠️ \`$b\` : conflit avec main, la branche est gardée. Ouvre une session et dis « Fusionne la branche $b dans main »." >> "$GITHUB_STEP_SUMMARY"
+              echec=1
+              continue
+            fi
+
+            # Ménage, la nuit seulement : une branche fusionnée et inactive depuis 2 jours est supprimée.
+            # (Pas au moment du push : la session qui l'utilise est peut-être encore ouverte.)
+            if [ "$EVENT" != "push" ]; then
+              git fetch --quiet origin main
+              dernier=$(git log -1 --format=%ct "origin/$b")
+              if git merge-base --is-ancestor "origin/$b" origin/main && [ $(( $(date +%s) - dernier )) -gt 172800 ]; then
+                git push --quiet origin --delete "$b" && echo "  - branche \`$b\` supprimée (fusionnée, inactive)" >> "$GITHUB_STEP_SUMMARY"
+              fi
+            fi
+          done
+
+          exit "$echec"

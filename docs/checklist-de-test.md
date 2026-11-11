@@ -45,7 +45,7 @@ Remets `plateforme: nolio` à la fin.
 
 ## C. Tâches planifiées (niveau 3)
 
-- [ ] **Exécuter maintenant** sur le brief : message reçu dans l'app, ligne `ok` dans `automations/runs.md`, sur `main` (pas sur une branche `claude/…`).
+- [ ] **Exécuter maintenant** sur le brief : message reçu dans l'app, ligne `ok` dans `automations/runs.md`, sur `main` (directement, ou via une branche `claude/…` fusionnée par l'Action « Fusion automatique dans main » dans la minute).
 - [ ] Météo présente. Si elle manque : domaine autorisé ? (`docs/open-meteo.md`)
 - [ ] **Exécuter maintenant** sur le débrief : `journal/AAAA/AAAA-MM-JJ.md` créé, `etat.md` réécrit.
 - [ ] Réponse aux questions dans la session : la note du jour est complétée, avec un nouveau commit.

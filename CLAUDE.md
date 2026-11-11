@@ -75,6 +75,7 @@ Les signaux de forme (feu du matin) sont un appui, pas une consigne : en mode `a
 | `conversations/` | ce que l'athlète lance en parlant : onboarding, débrief de course, douleur, plan | contenu du projet |
 | `docs/` | guides pour l'humain ; `docs/nolio.md` décrit la plateforme | contenu du projet |
 | `scripts/controle.py` | contrôle nocturne (GitHub Action) : tâches en retard ou en échec, liens cassés | contenu du projet |
+| `.github/workflows/merge-auto.yml` | fusion automatique des branches `claude/…` dans `main` (GitHub Action) | contenu du projet |
 
 Les fichiers `_template*.md` sont des modèles : copie-les, ne les modifie jamais.
 
@@ -88,7 +89,7 @@ Les fichiers `_template*.md` sont des modèles : copie-les, ne les modifie jamai
 - Une décision importante (changer de plan, sauter une course, changer d'objectif) va dans `decisions/`, à partir de `_template.md`, après accord.
 - Ne supprime jamais un fichier. Ne modifie ni `CLAUDE.md`, ni `conversations/`, ni `philosophy/` (sauf `choix.md`), ni `docs/`.
 - `automations/` : tu peux ajuster un prompt (format, rubriques, ton) **quand l'athlète valide un retour**, et tu le notes dans `profile/retours-agent.md`. Jamais les règles de sécurité ni les règles d'écriture dans Nolio.
-- **Git** : après une écriture, lance `git pull --rebase`, puis fais un commit au format `zone: résumé` (ex. `journal: 2026-10-22`) et un push **sur `main`**. Jamais sur une autre branche.
+- **Git** : après une écriture, lance `git pull --rebase`, puis fais un commit au format `zone: résumé` (ex. `journal: 2026-10-22`) et un push **sur `main`**. Si ta session t'impose une branche `claude/…`, pousse sur cette branche : le workflow « Fusion automatique dans main » la fusionne dans `main` tout seul, n'en parle pas à l'athlète. Jamais sur une autre branche. Si on te demande de fusionner une branche `claude/…` restée en conflit, fusionne-la dans `main` en gardant les deux versions quand c'est possible, et demande en cas de doute.
 
 ## Méthodes
 

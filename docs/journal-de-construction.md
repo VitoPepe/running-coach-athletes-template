@@ -34,6 +34,13 @@ Le prompt d'une tâche planifiée a été enregistré à l'avance. Il ne peut pa
 Dans une tâche planifiée cloud, Claude pousse ses modifications sur une branche préfixée `claude/`, sauf si le prompt dit autre chose. Pour un repo-mémoire, on veut que le journal arrive sur `main`.
 **Conséquence :** chaque prompt de tâche dit explicitement « commit et push sur `main` ».
 
+## 2026-11-11 — Les branches qui n'arrivaient jamais sur `main`
+
+### 🧱 La consigne « push sur main » ne suffit pas
+
+En testant le modèle, des branches `claude/…` se sont accumulées sans jamais être fusionnées : certaines sessions imposent leur branche de travail, et cette consigne passe avant `CLAUDE.md`. Résultat : la session suivante, qui part de `main`, ne voyait pas le travail de la précédente.
+**Solution :** une GitHub Action (`.github/workflows/merge-auto.yml`) fusionne chaque branche `claude/…` dans `main` dès qu'elle est poussée, rattrape les oubliées chaque nuit et fait le ménage. En cas de conflit, elle ne force rien : la branche reste et un mail part. Transparent pour l'athlète, et rien ne se perd.
+
 ### 🧱 Open-Meteo n'est pas joignable par défaut
 
 L'environnement cloud par défaut n'autorise qu'une liste de domaines (registres de paquets, clouds…). `api.open-meteo.com` n'en fait pas partie.

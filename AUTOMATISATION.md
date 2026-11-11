@@ -52,7 +52,8 @@ Remets `plateforme: nolio` avant de passer au niveau 1.
 
    Déjà connecté, mais ton repo n'apparaît pas ? Sur GitHub : ta photo → **Settings** → **Applications** → **Installed GitHub Apps** → **Claude** → **Configure** → **Repository access**. Ajoute ton repo, puis **Save**.
 3. **Ouvre une session sur ton repo** : sur claude.ai/code (ou dans l'onglet Code de l'app Claude, sur ordinateur ou téléphone), choisis ton repo dans la liste et démarre une session. Elle part toujours de la branche `main` de ton repo.
-4. **Lance l'onboarding** : dis « Lance l'onboarding ». C'est une interview, une question à la fois (`conversations/onboarding.md`). Tu peux couper : la fois suivante, le coach reprend là où vous en étiez.
+4. **Vérifie que les Actions sont actives** : onglet **Actions** de ton repo. Si GitHub le demande, clique sur « I understand my workflows, go ahead and enable them ». C'est ce qui ramène sur `main` tout ce que Claude écrit (voir « Les branches `claude/…` » plus bas).
+5. **Lance l'onboarding** : dis « Lance l'onboarding ». C'est une interview, une question à la fois (`conversations/onboarding.md`). Tu peux couper : la fois suivante, le coach reprend là où vous en étiez.
 
 À ce niveau, tu parles à ton coach quand tu veux : « Débriefe ma course » (`conversations/debrief-course.md`), « J'ai mal au genou » (`conversations/alerte-douleur.md`), « Mets à jour mon profil ».
 
@@ -174,6 +175,14 @@ Après une semaine, regarde ta consommation dans Claude (**Réglages → Utilisa
 
 L'app Claude pour ordinateur sait aussi planifier des tâches qui tournent **sur ton ordinateur** (il doit être allumé), sur une copie locale du repo. C'est utile si tu ne veux pas de cloud, mais c'est moins pratique : pas de brief si l'ordinateur dort. Le contenu des fichiers `automations/` ne change pas.
 
+## Les branches `claude/…`
+
+Selon l'endroit d'où tu lances Claude, une session peut être obligée de pousser son travail sur une branche `claude/…` plutôt que sur `main`. Comme chaque nouvelle session part de `main`, ce travail serait invisible la fois suivante (onboarding à refaire, journal manquant).
+
+Tu n'as rien à faire : la GitHub Action **Fusion automatique dans main** (`.github/workflows/merge-auto.yml`) fusionne chaque branche `claude/…` dans `main` dès qu'elle est poussée. Chaque nuit, elle rattrape celles qui auraient été oubliées et supprime celles qui sont fusionnées et inactives depuis 2 jours.
+
+En cas de conflit (deux sessions ont modifié la même ligne), rien n'est forcé : la branche est gardée et GitHub t'envoie un mail. Ouvre une session et dis « Fusionne la branche claude/… dans main ».
+
 ## Quand ça coince
 
 | Symptôme | Cause probable | Que faire |
@@ -182,7 +191,8 @@ L'app Claude pour ordinateur sait aussi planifier des tâches qui tournent **sur
 | Pas de météo, ou « host_not_allowed » | domaine non autorisé | `docs/open-meteo.md` |
 | Météo « quota » ou 429 | Open-Meteo saturé | rien : le secours met.no prend le relais |
 | « Je n'ai pas accès à Nolio » | connecteur décoché dans la tâche, ou expiré | coche Nolio dans la tâche ; reconnecte-le dans Réglages → Connecteurs |
-| Le journal n'arrive pas sur `main` | push sur une branche `claude/…` | vérifie que le talon dit bien « push sur main » |
+| Le journal n'arrive pas sur `main` | branche `claude/…` pas encore fusionnée | onglet Actions → « Fusion automatique dans main » : les Actions sont-elles activées ? Le dernier passage est-il vert ? |
+| Mail « Fusion automatique dans main » en échec | conflit entre une branche `claude/…` et `main` | ouvre une session et dis « Fusionne la branche claude/… dans main » (le nom est dans le mail) |
 | Mail « Contrôle du coach » en échec | une tâche n'a pas tourné, ou un lien est cassé | ouvre le mail : le rapport dit quoi |
 | Le brief est vide de forme | montre pas encore synchronisée | décale le brief plus tard |
 | Le coach refuse d'écrire dans Nolio | mode avec coach, ou tâche planifiée, ou permission absente | c'est voulu : voir le niveau 5 |
